@@ -1,0 +1,87 @@
+.cta {
+  background: var(--olive);
+  position: relative;
+  overflow: hidden;
+  min-height: 80vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/* Left: Sherry's photo */
+.cta-photo-col {
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-photo-col img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  opacity: 0.85;
+}
+
+/* Right: quote + CTA */
+.cta-content-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 4rem;
+  gap: 3rem;
+}
+
+.cta-quote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1.5;
+}
+
+.cta-box {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 2.5rem;
+  border-radius: 2px;
+}
+
+.cta-box-title {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+}
+
+.cta-box-text {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  margin-bottom: 1.8rem;
+  font-weight: 300;
+}
+
+.cta-btn {
+  display: inline-block;
+  background: var(--white);
+  color: var(--olive);
+  padding: 0.8rem 2rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: background 0.2s, transform 0.2s;
+}
+.cta-btn:hover {
+  background: var(--light-peach);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 900px) {
+  .cta { grid-template-columns: 1fr; min-height: auto; }
+  .cta-photo-col { height: 50vw; }
+  .cta-content-col { padding: 3rem 2rem; }
+}

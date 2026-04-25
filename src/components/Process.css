@@ -1,0 +1,96 @@
+.process {
+  background: var(--white);
+  padding: 5rem 2rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.process-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.process-title {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: var(--sage);
+  text-align: center;
+  margin-bottom: 0.6rem;
+}
+
+.process-sub {
+  font-size: 0.88rem;
+  color: var(--light-gray);
+  text-align: center;
+  margin-bottom: 3.5rem;
+  font-style: italic;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.process-step {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+}
+
+.step-number {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--sage);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.step-title {
+  font-family: var(--sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.step-desc {
+  font-size: 0.84rem;
+  color: var(--gray);
+  line-height: 1.7;
+  font-weight: 300;
+}
+
+.process-photos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.process-photo {
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 2px;
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .process-steps, .process-photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .process-steps, .process-photos {
+    grid-template-columns: 1fr;
+  }
+}

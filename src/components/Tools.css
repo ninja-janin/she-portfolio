@@ -1,0 +1,122 @@
+.tools {
+  background: var(--white);
+  padding: 5rem 2rem;
+}
+
+.tools-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* Left — Skills */
+.skills-col-photo {
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+}
+
+.skills-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 1.4rem;
+}
+
+.skills-script {
+  font-family: var(--script);
+  font-size: 2.4rem;
+  color: var(--sage);
+  line-height: 1;
+}
+
+.skills-serif {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.skills-list li {
+  font-size: 0.88rem;
+  color: var(--gray);
+  line-height: 1.6;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--sage);
+}
+
+/* Right — Tools */
+.tools-col-label {
+  display: flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tools-script {
+  font-family: var(--script);
+  font-size: 2.4rem;
+  color: var(--sage);
+  line-height: 1;
+}
+
+.tools-serif {
+  font-family: var(--serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.tools-subtitle {
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--light-gray);
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+}
+
+.tools-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tool-chip {
+  background: var(--cream);
+  border: 1px solid rgba(125,122,98,0.25);
+  color: var(--gray);
+  padding: 0.38rem 0.85rem;
+  border-radius: 100px;
+  font-size: 0.78rem;
+  font-weight: 400;
+  transition: background 0.2s, color 0.2s;
+}
+
+.tool-chip:hover {
+  background: var(--sage);
+  color: var(--white);
+  border-color: var(--sage);
+}
+
+@media (max-width: 900px) {
+  .tools-inner { grid-template-columns: 1fr; gap: 3rem; }
+}

@@ -78,7 +78,7 @@
   .about-inner { grid-template-columns: 1fr; min-height: auto; }
   .about-left {
     height: auto;
-    padding: 2rem 1.5rem 0;
+    padding: 2rem 2rem 0;
   }
   .about-left img {
     height: auto;

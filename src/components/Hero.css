@@ -1,28 +1,52 @@
 .hero {
   position: relative;
   min-height: 100vh;
-  background-color: var(--olive);
   display: grid;
-  grid-template-columns: 1fr 42%;
+  grid-template-columns: 58% 42%;
   overflow: hidden;
+}
+
+/* Background photo — exact Canva dimensions + offset, flipped horizontally */
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 1440px;
+  height: 2163.93px;
+  top: -374.981px;
+  left: 50%;
+  margin-left: -720px;
+  background-image: url('/images/hero.jpg');
+  background-size: cover;
+  background-position: center top;
+  transform: scaleX(-1);
+  z-index: 0;
+}
+
+/* Light warm overlay */
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(185, 178, 162, 0.38);
+  z-index: 1;
 }
 
 .hero-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 7rem 3.5rem 5rem 5rem;
+  padding: 9rem 3rem 5rem 5rem;
   position: relative;
   z-index: 2;
 }
 
 .hero-headline {
   font-family: var(--serif);
-  font-size: clamp(2.4rem, 4.2vw, 4rem);
+  font-size: clamp(2.8rem, 5vw, 4.8rem);
   font-weight: 400;
-  line-height: 1.18;
+  line-height: 1.15;
   color: var(--white);
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.4rem;
 }
 
 .hero-headline em {
@@ -30,61 +54,78 @@
 }
 
 .hero-sub {
-  font-size: 0.95rem;
-  line-height: 1.85;
-  color: rgba(255,255,255,0.82);
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.92);
   max-width: 400px;
-  margin-bottom: 2.4rem;
+  margin-bottom: 2.6rem;
   font-weight: 300;
-  letter-spacing: 0.02em;
 }
 
+/* Filled white pill button */
 .hero-btn {
   display: inline-block;
-  border: 1px solid rgba(255,255,255,0.6);
-  color: var(--white);
-  padding: 0.65rem 1.8rem;
-  font-size: 0.78rem;
+  background: var(--white);
+  color: #222;
+  border: none;
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
+  font-family: var(--sans);
+  font-size: 0.88rem;
   font-weight: 400;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.02em;
   align-self: flex-start;
-  transition: background 0.2s, border-color 0.2s;
+  transition: opacity 0.2s;
 }
 
 .hero-btn:hover {
-  background: rgba(255,255,255,0.12);
+  opacity: 0.88;
 }
 
-/* bottom "ABOUT ME" label */
-.hero-about-label {
-  position: absolute;
-  bottom: 1.6rem;
-  right: 1.8rem;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  color: var(--olive);
-  writing-mode: horizontal-tb;
-  z-index: 3;
-}
-
+/* Right column — floating card */
 .hero-right {
   position: relative;
-  overflow: hidden;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4rem;
 }
 
 .hero-right img {
-  width: 100%;
-  height: 100%;
+  width: 396.556px;
+  height: 538.209px;
   object-fit: cover;
   object-position: center top;
+  border-radius: 20px;
   display: block;
+  flex-shrink: 0;
 }
+
+/* Hero load animations */
+@keyframes heroFadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes heroFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.hero-animate-1 { animation: heroFadeUp 0.8s cubic-bezier(.22,.61,.36,1) 0.20s both; }
+.hero-animate-2 { animation: heroFadeUp 0.8s cubic-bezier(.22,.61,.36,1) 0.38s both; }
+.hero-animate-3 { animation: heroFadeUp 0.8s cubic-bezier(.22,.61,.36,1) 0.54s both; }
+.hero-animate-4 { animation: heroFadeIn  1.0s ease 0.15s both; }
 
 @media (max-width: 900px) {
   .hero {
     grid-template-columns: 1fr;
-    grid-template-rows: auto 55vw;
+    grid-template-rows: auto 65vw;
   }
   .hero-left { padding: 8rem 2rem 3rem; }
+  .hero-right img {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
 }

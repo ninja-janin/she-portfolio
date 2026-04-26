@@ -18,11 +18,11 @@ export default function Process() {
   return (
     <section className="process">
       <div className="process-inner">
-        <h2 className="process-title">How I Work With Clients</h2>
-        <p className="process-sub">A streamlined yet adaptable approach designed to optimize your systems and drive lasting growth.</p>
+        <h2 className="process-title" data-reveal>How I Work With Clients</h2>
+        <p className="process-sub" data-reveal data-delay="1">A streamlined yet adaptable approach designed to optimize your systems and drive lasting growth.</p>
         <div className="process-steps">
           {steps.map((s, i) => (
-            <div key={i} className="process-step">
+            <div key={i} className="process-step" data-reveal data-delay={String(i + 1)}>
               <div className="step-number">{s.num}</div>
               <p className="step-title">{s.title}</p>
               <p className="step-desc">{s.desc}</p>
@@ -31,7 +31,7 @@ export default function Process() {
         </div>
         <div className="process-photos">
           {photos.map((p, i) => (
-            <img key={i} src={p} alt={`Step ${i+1}`} className="process-photo" />
+            <img key={i} src={p} alt={`Step ${i+1}`} className="process-photo" data-reveal="scale" data-delay={String(i + 1)} />
           ))}
         </div>
       </div>

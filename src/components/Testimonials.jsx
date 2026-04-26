@@ -11,10 +11,10 @@ export default function Testimonials() {
   return (
     <section className="testimonials">
       <div className="testimonials-inner">
-        <p className="testimonials-title">LOVE NOTES FROM MY CLIENTS</p>
+        <p className="testimonials-title" data-reveal>LOVE NOTES FROM MY CLIENTS</p>
         <div className="testimonials-grid">
           {clients.map((c, i) => (
-            <div key={i} className="testimonial-card">
+            <div key={i} className="testimonial-card" data-reveal data-delay={String(i + 1)}>
               <div className="phone-frame">
                 <div className="phone-notch" />
                 <img src={c.img} alt={c.name} />

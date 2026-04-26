@@ -11,7 +11,7 @@ export default function Stats() {
     <section className="stats">
       <div className="stats-inner">
         {stats.map((s, i) => (
-          <div key={i} className="stat-item">
+          <div key={i} className="stat-item" data-reveal data-delay={String(i + 1)}>
             <span className="stat-value">{s.value}</span>
             <span className="stat-label">{s.label}</span>
           </div>

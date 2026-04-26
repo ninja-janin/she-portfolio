@@ -1,3 +1,4 @@
+import useScrollReveal from './hooks/useScrollReveal';
 import Hero from './components/Hero';
 import About from './components/About';
 import Stats from './components/Stats';
@@ -12,6 +13,7 @@ import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 
 export default function App() {
+  useScrollReveal();
   return (
     <main>
       <Hero />

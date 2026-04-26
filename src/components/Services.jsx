@@ -49,9 +49,9 @@ export default function Services() {
   return (
     <section id="services" className="services">
       <div className="services-inner">
-        <p className="services-heading">Choose the plan that fits your business needs</p>
+        <p className="services-heading" data-reveal>Choose the plan that fits your business needs</p>
         {services.map((s, i) => (
-          <div key={i} className="service-block">
+          <div key={i} className="service-block" data-reveal data-delay={String(i + 1)}>
             <div className="service-content">
               <h3 className="service-name">{s.title}</h3>
               <p className="service-sub">Inclusions:</p>

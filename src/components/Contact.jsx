@@ -4,20 +4,20 @@ export default function Contact() {
   return (
     <section id="contact" className="contact">
       <div className="contact-left">
-        <div className="contact-heading">
+        <div className="contact-heading" data-reveal>
           <span className="contact-work">WORK </span>
           <span className="contact-with">with</span>
           <br />
           <span className="contact-name">Sherry Astorga</span>
         </div>
-        <p className="contact-role">Technical Virtual Assistant</p>
-        <a href="mailto:sherryrose.astorga@gmail.com" className="contact-email">
+        <p className="contact-role" data-reveal data-delay="1">Technical Virtual Assistant</p>
+        <a href="mailto:sherryrose.astorga@gmail.com" className="contact-email" data-reveal data-delay="2">
           sherryrose.astorga@gmail.com
         </a>
-        <a href="mailto:sherryrose.astorga@gmail.com" className="contact-btn">
+        <a href="mailto:sherryrose.astorga@gmail.com" className="contact-btn" data-reveal data-delay="3">
           Email me to get started
         </a>
-        <div className="contact-socials">
+        <div className="contact-socials" data-reveal data-delay="4">
           <a href="#" className="social-icon" aria-label="Facebook">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
           </a>
@@ -29,7 +29,7 @@ export default function Contact() {
           </a>
         </div>
       </div>
-      <div className="contact-right">
+      <div className="contact-right" data-reveal="right">
         <img src="/images/sherry-hero.jpg" alt="Sherry Astorga" />
       </div>
     </section>

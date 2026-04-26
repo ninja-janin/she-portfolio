@@ -21,23 +21,27 @@ export default function Tools() {
     <section className="tools">
       <div className="tools-inner">
         <div>
-          <img src="/images/work2.jpg" alt="Working at desk" className="skills-col-photo" />
-          <div className="skills-label">
+          <img src="/images/work2.jpg" alt="Working at desk" className="skills-col-photo" data-reveal="left" />
+          <div className="skills-label" data-reveal data-delay="1">
             <span className="skills-script">Skills</span>
             <span className="skills-serif">&amp; Expertise</span>
           </div>
           <ul className="skills-list">
-            {skills.map((s, i) => <li key={i}>{s}</li>)}
+            {skills.map((s, i) => (
+              <li key={i} data-reveal data-delay={String(i + 2)}>{s}</li>
+            ))}
           </ul>
         </div>
         <div>
-          <div className="tools-col-label">
+          <div className="tools-col-label" data-reveal="right">
             <span className="tools-script">Tools</span>
             <span className="tools-serif">&amp; Systems</span>
           </div>
-          <p className="tools-subtitle">I Use and Familiar With</p>
+          <p className="tools-subtitle" data-reveal data-delay="1">I Use and Familiar With</p>
           <div className="tools-grid">
-            {tools.map((t, i) => <span key={i} className="tool-chip">{t}</span>)}
+            {tools.map((t, i) => (
+              <span key={i} className="tool-chip" data-reveal data-delay={String((i % 6) + 1)}>{t}</span>
+            ))}
           </div>
         </div>
       </div>

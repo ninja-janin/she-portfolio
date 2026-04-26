@@ -22,10 +22,10 @@ export default function FAQ() {
   return (
     <section className="faq">
       <div className="faq-inner">
-        <div className="faq-decor">FAQs</div>
+        <div className="faq-decor" data-reveal>FAQs</div>
         <div className="faq-cards">
           {faqs.map((f, i) => (
-            <div key={i} className="faq-card">
+            <div key={i} className="faq-card" data-reveal data-delay={String(i + 1)}>
               <div className="faq-number">{f.num}</div>
               <div>
                 <p className="faq-q">{f.q}</p>

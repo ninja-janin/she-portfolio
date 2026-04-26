@@ -16,12 +16,12 @@ export default function Portfolio() {
     <section id="portfolio" className="portfolio">
       <div className="portfolio-inner">
         <div className="portfolio-label-wrap">
-          <span className="portfolio-script">Sample</span>
-          <h2 className="portfolio-heading">WORKS</h2>
+          <span className="portfolio-script" data-reveal>Sample</span>
+          <h2 className="portfolio-heading" data-reveal data-delay="1">WORKS</h2>
         </div>
         <div className="portfolio-grid">
           {works.map((w, i) => (
-            <div key={i} className="portfolio-item">
+            <div key={i} className="portfolio-item" data-reveal="scale" data-delay={String((i % 4) + 1)}>
               <img src={w.img} alt={w.label} className="portfolio-item-img" />
               <p className="portfolio-item-label">{w.label}</p>
             </div>

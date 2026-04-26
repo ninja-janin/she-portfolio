@@ -70,18 +70,59 @@
 }
 
 @media (max-width: 768px) {
-  .navbar { position: fixed; background: rgba(110,107,85,0.95); padding: 1rem 1.5rem; }
+  .navbar {
+    position: fixed;
+    background: rgba(90, 87, 68, 0.97);
+    padding: 1rem 1.5rem;
+    z-index: 200;
+  }
+
   .hamburger { display: flex; }
+
   .navbar-links {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0; right: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
     flex-direction: column;
-    background: rgba(110,107,85,0.97);
-    padding: 1.2rem 1.5rem;
-    gap: 1rem;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+    background: rgba(80, 78, 60, 0.98);
+    z-index: 190;
+    padding-bottom: 2rem;
   }
+
   .navbar-links.open { display: flex; }
+
+  .navbar-links a {
+    font-family: var(--serif);
+    font-size: 1.8rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-decoration: none;
+    color: var(--white);
+    opacity: 0.9;
+    transition: opacity 0.2s;
+  }
+
+  .navbar-links a:hover { opacity: 1; }
+
+  .navbar-links .nav-contact {
+    font-size: 1rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    border: 1.5px solid rgba(255,255,255,0.6);
+    border-radius: 50px;
+    padding: 0.6rem 2rem;
+    text-decoration: none;
+    margin-top: 0.6rem;
+  }
+
+  .navbar-links .nav-contact:hover {
+    background: rgba(255,255,255,0.12);
+    opacity: 1;
+  }
 }

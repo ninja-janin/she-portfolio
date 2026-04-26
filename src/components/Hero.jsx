@@ -20,7 +20,7 @@ export default function Hero() {
         <a href="#contact" className="hero-btn hero-animate-3">Work with me</a>
       </div>
       <div className="hero-right hero-animate-4">
-        <img src="/images/sherry-hero.jpg" alt="Sherry Astorga" />
+        <img src="/images/client1.jpg" alt="Sherry Astorga" />
       </div>
       </div>
     </section>

@@ -120,9 +120,10 @@
 .hero-animate-4 { animation: heroFadeIn  1.0s ease 0.15s both; }
 
 @media (max-width: 900px) {
-  .hero {
+  .hero-inner {
     grid-template-columns: 1fr;
     grid-template-rows: auto 65vw;
+    min-height: auto;
   }
   .hero-left { padding: 8rem 2rem 3rem; }
   .hero-right img {

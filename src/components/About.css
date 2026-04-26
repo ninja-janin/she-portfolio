@@ -71,7 +71,7 @@
 .about-cta:hover { background: var(--sage); }
 
 @media (max-width: 900px) {
-  .about { grid-template-columns: 1fr; min-height: auto; }
+  .about-inner { grid-template-columns: 1fr; min-height: auto; }
   .about-left { height: 60vw; }
   .about-right { padding: 3rem 2rem; }
 }

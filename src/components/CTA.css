@@ -86,7 +86,7 @@
 }
 
 @media (max-width: 900px) {
-  .cta { grid-template-columns: 1fr; min-height: auto; }
+  .cta-inner { grid-template-columns: 1fr; min-height: auto; }
   .cta-photo-col { height: 50vw; }
   .cta-content-col { padding: 3rem 2rem; }
 }

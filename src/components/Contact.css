@@ -104,7 +104,7 @@
 }
 
 @media (max-width: 900px) {
-  .contact { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
   .contact-left { padding: 3rem 2rem; }
   .contact-right { height: 60vw; }
 }

@@ -1,5 +1,6 @@
 .about {
   background: var(--cream);
+  pointer-events: auto;
 }
 
 .about-inner {
@@ -67,6 +68,9 @@
   text-transform: uppercase;
   align-self: flex-start;
   transition: background 0.2s;
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
 }
 .about-cta:hover { background: var(--sage); }
 

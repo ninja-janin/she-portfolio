@@ -29,7 +29,14 @@ export default function About() {
           ensure my clients achieve consistent results, stronger online presence, and smoother
           day-to-day operations.
         </p>
-        <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="about-cta" data-reveal data-delay="6">
+        <a
+          href="https://calendly.com/sherryrose-astorga/30min?month=2026-04"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="about-cta"
+          data-reveal
+          data-delay="6"
+        >
           Book a Call With Me
         </a>
       </div>

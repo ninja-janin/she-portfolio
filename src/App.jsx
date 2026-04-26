@@ -11,6 +11,7 @@ import Process from './components/Process';
 import CTA from './components/CTA';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 export default function App() {
   useScrollReveal();
@@ -28,6 +29,7 @@ export default function App() {
       <CTA />
       <FAQ />
       <Contact />
+      <ScrollToTop />
     </main>
   );
 }

@@ -18,7 +18,12 @@ export default function CTA() {
             Book a free 30-minute call and discover how I can streamline your business with
             CRM management, tech support, and automation, so you can focus on growth.
           </p>
-          <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="cta-btn">
+          <a
+            href="https://calendly.com/sherryrose-astorga/30min?month=2026-04"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="cta-btn"
+          >
             Book A Call With Me
           </a>
         </div>

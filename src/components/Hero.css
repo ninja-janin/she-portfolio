@@ -25,6 +25,7 @@
   background-size: cover;
   background-position: center top;
   transform: scaleX(-1);
+  pointer-events: none;
   z-index: 0;
 }
 
@@ -34,6 +35,7 @@
   position: absolute;
   inset: 0;
   background: rgba(148, 140, 110, 0.52);
+  pointer-events: none;
   z-index: 1;
 }
 

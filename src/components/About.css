@@ -76,6 +76,13 @@
 
 @media (max-width: 900px) {
   .about-inner { grid-template-columns: 1fr; min-height: auto; }
-  .about-left { height: 60vw; }
-  .about-right { padding: 3rem 2rem; }
+  .about-left {
+    height: auto;
+    padding: 2rem 1.5rem 0;
+  }
+  .about-left img {
+    height: auto;
+    border-radius: 16px;
+  }
+  .about-right { padding: 2rem 2rem 3rem; }
 }

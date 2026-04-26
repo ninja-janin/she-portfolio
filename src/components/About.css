@@ -1,5 +1,10 @@
 .about {
   background: var(--cream);
+}
+
+.about-inner {
+  max-width: 1440px;
+  margin: 0 auto;
   min-height: 100vh;
   display: grid;
   grid-template-columns: 45% 1fr;

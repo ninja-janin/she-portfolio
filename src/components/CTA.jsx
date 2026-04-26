@@ -3,6 +3,7 @@ import './CTA.css';
 export default function CTA() {
   return (
     <section className="cta">
+      <div className="cta-inner">
       <div className="cta-photo-col" data-reveal="left">
         <img src="/images/sherry-hero.jpg" alt="Sherry Astorga" />
       </div>
@@ -21,6 +22,7 @@ export default function CTA() {
             Book A Call With Me
           </a>
         </div>
+      </div>
       </div>
     </section>
   );

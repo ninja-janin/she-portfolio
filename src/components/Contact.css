@@ -1,5 +1,10 @@
 .contact {
   background: var(--sage);
+}
+
+.contact-inner {
+  max-width: 1440px;
+  margin: 0 auto;
   min-height: 60vh;
   display: grid;
   grid-template-columns: 1fr 42%;

@@ -3,6 +3,7 @@ import './Contact.css';
 export default function Contact() {
   return (
     <section id="contact" className="contact">
+      <div className="contact-inner">
       <div className="contact-left">
         <div className="contact-heading" data-reveal>
           <span className="contact-work">WORK </span>
@@ -31,6 +32,7 @@ export default function Contact() {
       </div>
       <div className="contact-right" data-reveal="right">
         <img src="/images/sherry-hero.jpg" alt="Sherry Astorga" />
+      </div>
       </div>
     </section>
   );

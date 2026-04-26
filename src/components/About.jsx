@@ -3,6 +3,7 @@ import './About.css';
 export default function About() {
   return (
     <section id="about" className="about">
+      <div className="about-inner">
       <div className="about-left" data-reveal="left">
         <img src="/images/client2.jpg" alt="Sherry Astorga" />
       </div>
@@ -31,6 +32,7 @@ export default function About() {
         <a href="https://calendly.com" target="_blank" rel="noopener noreferrer" className="about-cta" data-reveal data-delay="6">
           Book a Call With Me
         </a>
+      </div>
       </div>
     </section>
   );

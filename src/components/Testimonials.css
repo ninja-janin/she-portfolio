@@ -85,5 +85,6 @@
 }
 
 @media (max-width: 480px) {
-  .testimonials-grid { grid-template-columns: 1fr; max-width: 280px; margin: 0 auto; }
+  .testimonials-title { font-size: 1rem; letter-spacing: 0.18em; }
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); max-width: none; }
 }
